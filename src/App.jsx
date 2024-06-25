@@ -16,7 +16,7 @@ function HomePage() {
     <>
       <h1>Home</h1>
       <p>Esta es una página de ejemplo para crear un React Router desde cero</p>
-      <button onClick={() => navigate('/about')}>Ir a Sobre nosotros</button>
+      <button onClick={() => navigate("/about")}>Ir a Sobre nosotros</button>
     </>
   );
 }
@@ -32,7 +32,7 @@ function AboutPage() {
         />
         <p>Holaaa, estamos creando un clon de React Router</p>
       </div>
-      <button onClick={() => navigate('/')}>Ir a la Home</button>
+      <button onClick={() => navigate("/")}>Ir a la Home</button>
     </>
   );
 }
@@ -46,9 +46,11 @@ function App() {
     };
 
     window.addEventListener(NAVIGATION_EVENT, onLocationChange);
+    window.addEventListener("popstate", onLocationChange);
 
     return () => {
       window.removeEventListener(NAVIGATION_EVENT, onLocationChange);
+      window.removeEventListener("popstate", onLocationChange);
     };
   }, []);
 
