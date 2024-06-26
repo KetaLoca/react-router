@@ -29,7 +29,7 @@ const routes = [
 function App() {
   return (
     <main>
-      <Router routes={routes} defaultComponent={Page404} />
+      <Router routes={routes} defaultComponent={Page404}/>
     </main>
   );
 }
