@@ -4,6 +4,7 @@ import AboutPage from "./pages/About";
 
 import { Router } from "./Router";
 import { Link } from "./Link";
+import Page404 from "./pages/404";
 
 const routes = [
   { path: "/", Component: HomePage },
@@ -17,7 +18,9 @@ const routes = [
           src="https://i.pinimg.com/236x/b0/52/fd/b052fd86b510887c2e1e907cdd5fd60f.jpg"
           alt="Gatito tryahrd"
         />
-        <p><Link to="/">Volver a la Home</Link></p>
+        <p>
+          <Link to="/">Volver a la Home</Link>
+        </p>
       </div>
     ),
   },
@@ -26,7 +29,7 @@ const routes = [
 function App() {
   return (
     <main>
-      <Router routes={routes} />
+      <Router routes={routes} defaultComponent={Page404} />
     </main>
   );
 }

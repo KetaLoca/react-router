@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Page404 from "./pages/404";
 
 export function Router({
   routes = routes,
